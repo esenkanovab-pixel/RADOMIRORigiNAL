@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+{% block title %}CRUD статей{% endblock %}
+{% block content %}<p class="label">ОТДЕЛЬНОЕ ПРИЛОЖЕНИЕ ARTICLES</p>
+<h1>Управление статьями</h1>
+<p>Создавайте статьи, открывайте их, редактируйте и удаляйте.</p>
+<a class="button" href="{% url 'articles:create' %}">Создать статью</a>
+{% for article in articles %}<article>
+<h2><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h2>
+<p>{{ article.content|truncatechars:160 }}</p>
+<a href="{% url 'articles:update' article.pk %}">Редактировать</a>
+<a href="{% url 'articles:delete' article.pk %}">Удалить</a>
+</article>{% empty %}<article>Статей пока нет</article>{% endfor %}
+{% endblock %}

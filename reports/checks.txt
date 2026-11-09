@@ -1,0 +1,5 @@
+Command: python manage.py check
+Exit code: 0
+Django 5.2.18
+
+System check identified no issues (0 silenced).

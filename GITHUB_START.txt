@@ -1,0 +1,27 @@
+КАК ОТКРЫТЬ ОТДЕЛЬНО В VS CODE
+
+1. Распакуйте архив в отдельное место, например C:\Projects.
+2. Не помещайте папку внутрь старого репозитория с другими проектами.
+3. В VS Code выберите Файл → Открыть папку.
+4. Выберите django-blog-crud — папку, в которой лежит manage.py.
+5. Запустите start_windows.bat, затем откройте:
+   http://127.0.0.1:8000/blog/ — блог
+   http://127.0.0.1:8000/articles/ — CRUD статей
+   http://127.0.0.1:8000/tours/ — туры
+   http://127.0.0.1:8000/docs/ — документация
+Для учётной записи выполните createsuperuser (см. README.md).
+
+КАК ЗАГРУЗИТЬ В ОТДЕЛЬНЫЙ РЕПОЗИТОРИЙ GITHUB
+
+Создайте новый пустой репозиторий на GitHub.
+В терминале VS Code, открытом именно в django-blog-crud:
+
+git init
+git add .
+git commit -m "Django blog, articles CRUD and tours"
+git branch -M main
+git remote add origin URL_ВАШЕГО_НОВОГО_РЕПОЗИТОРИЯ
+git push -u origin main
+
+Замените URL_ВАШЕГО_НОВОГО_РЕПОЗИТОРИЯ на адрес репозитория GitHub.
+В архиве нет истории Git или сторонних проектов.

@@ -1,0 +1,7 @@
+{% extends 'blog/base.html' %}
+{% block content %}<p class="label">СТАТЬИ</p><h1>Блог о программировании</h1>
+<p class="intro">Откройте статью: каждый GET-запрос к её странице добавляет один просмотр.</p>
+{% for blog in blogs %}<article><span class="label">Статья № {{ blog.pk }}</span>
+<h2><a href="{% url 'blog:detail' blog.pk %}">{{ blog.title }}</a></h2>
+<p>{{ blog.content|truncatechars:200 }}</p><p class="muted">Просмотры: {{ blog.likes }}</p></article>
+{% empty %}<article><h2>Статей пока нет</h2><p>Выполните команду python manage.py seed_blogs или добавьте статью через админку.</p></article>{% endfor %}{% endblock %}

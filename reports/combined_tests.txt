@@ -1,0 +1,125 @@
+Creating test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+Found 87 test(s).
+Operations to perform:
+  Synchronize unmigrated apps: admindocs, messages, staticfiles
+  Apply all migrations: admin, articles, auth, blog, contenttypes, sessions, tours
+Synchronizing apps without migrations:
+  Creating tables...
+    Running deferred SQL...
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying articles.0001_initial... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying blog.0001_initial... OK
+  Applying blog.0002_blog_likes... OK
+  Applying sessions.0001_initial... OK
+  Applying tours.0001_initial...test_create_get_displays_form (articles.tests.ArticleCRUDTests.test_create_get_displays_form) ... ok
+test_create_post_saves_article (articles.tests.ArticleCRUDTests.test_create_post_saves_article) ... ok
+test_delete_get_only_asks_confirmation (articles.tests.ArticleCRUDTests.test_delete_get_only_asks_confirmation) ... ok
+test_delete_post_removes_only_selected_article (articles.tests.ArticleCRUDTests.test_delete_post_removes_only_selected_article) ... ok
+test_detail_displays_saved_data (articles.tests.ArticleCRUDTests.test_detail_displays_saved_data) ... ok
+test_empty_list (articles.tests.ArticleCRUDTests.test_empty_list) ... ok
+test_invalid_create_does_not_save (articles.tests.ArticleCRUDTests.test_invalid_create_does_not_save) ... ok
+test_invalid_update_preserves_data (articles.tests.ArticleCRUDTests.test_invalid_update_preserves_data) ... ok
+test_list_displays_article_and_actions (articles.tests.ArticleCRUDTests.test_list_displays_article_and_actions) ... ok
+test_missing_detail_update_delete_return_404 (articles.tests.ArticleCRUDTests.test_missing_detail_update_delete_return_404) ... ok
+test_post_with_csrf_is_accepted (articles.tests.ArticleCRUDTests.test_post_with_csrf_is_accepted) ... ok
+test_post_without_csrf_is_rejected (articles.tests.ArticleCRUDTests.test_post_without_csrf_is_rejected) ... ok
+test_update_get_has_initial_data (articles.tests.ArticleCRUDTests.test_update_get_has_initial_data) ... ok
+test_update_post_changes_only_selected_article (articles.tests.ArticleCRUDTests.test_update_post_changes_only_selected_article) ... ok
+test_detail_increments_likes (blog.tests.BlogTests.test_detail_increments_likes) ... ok
+test_detail_link_works (blog.tests.BlogTests.test_detail_link_works) ... ok
+test_detail_returns_correct_blog (blog.tests.BlogTests.test_detail_returns_correct_blog) ... ok
+test_empty_list (blog.tests.BlogTests.test_empty_list) ... ok
+test_head_does_not_increment_likes (blog.tests.BlogTests.test_head_does_not_increment_likes) ... ok
+test_list_contains_blog_and_id (blog.tests.BlogTests.test_list_contains_blog_and_id) ... ok
+test_list_displays_content (blog.tests.BlogTests.test_list_displays_content) ... ok
+test_list_does_not_increment_likes (blog.tests.BlogTests.test_list_does_not_increment_likes) ... ok
+test_list_returns_200 (blog.tests.BlogTests.test_list_returns_200) ... ok
+test_missing_id_returns_404 (blog.tests.BlogTests.test_missing_id_returns_404) ... ok
+test_new_blog_likes_default_zero (blog.tests.BlogTests.test_new_blog_likes_default_zero) ... ok
+test_two_get_requests_increment_twice (blog.tests.BlogTests.test_two_get_requests_increment_twice) ... ok
+test_cross_navigation (tours.test_integration.IntegrationTests.test_cross_navigation) ... ok
+test_documentation_covers_all_apps (tours.test_integration.IntegrationTests.test_documentation_covers_all_apps) ... ok
+test_existing_apps_and_tours_share_project (tours.test_integration.IntegrationTests.test_existing_apps_and_tours_share_project) ... ok
+test_admin_attendance_submission (tours.tests.TourTests.test_admin_attendance_submission) ... ok
+test_admin_category_submission (tours.tests.TourTests.test_admin_category_submission) ... ok
+test_admin_departure_invalid_data (tours.tests.TourTests.test_admin_departure_invalid_data) ... ok
+test_admin_departure_submission (tours.tests.TourTests.test_admin_departure_submission) ... ok
+test_admindocs_anonymous_denied (tours.tests.TourTests.test_admindocs_anonymous_denied) ... ok
+test_admindocs_staff_pages (tours.tests.TourTests.test_admindocs_staff_pages) ... ok
+test_categories_many_to_many (tours.tests.TourTests.test_categories_many_to_many) ... ok
+test_comment_booking_spoof_ignored (tours.tests.TourTests.test_comment_booking_spoof_ignored) ... ok
+test_comment_empty_and_whitespace_rejected (tours.tests.TourTests.test_comment_empty_and_whitespace_rejected) ... ok
+test_comment_escaped_html (tours.tests.TourTests.test_comment_escaped_html) ... ok
+test_comment_future_even_attended_rejected (tours.tests.TourTests.test_comment_future_even_attended_rejected) ... ok
+test_comment_get_has_no_effect (tours.tests.TourTests.test_comment_get_has_no_effect) ... ok
+test_comment_max_length_allowed (tours.tests.TourTests.test_comment_max_length_allowed) ... ok
+test_comment_missing_booking (tours.tests.TourTests.test_comment_missing_booking) ... ok
+test_comment_other_booking_rejected (tours.tests.TourTests.test_comment_other_booking_rejected) ... ok
+test_comment_requires_login (tours.tests.TourTests.test_comment_requires_login) ... ok
+test_comment_too_long_rejected (tours.tests.TourTests.test_comment_too_long_rejected) ... ok
+test_comment_unconfirmed_rejected (tours.tests.TourTests.test_comment_unconfirmed_rejected) ... ok
+test_create_invalid_fields (tours.tests.TourTests.test_create_invalid_fields) ... ok
+test_create_tour_regular_user_denied (tours.tests.TourTests.test_create_tour_regular_user_denied) ... ok
+test_create_tour_staff (tours.tests.TourTests.test_create_tour_staff) ... ok
+test_csrf_on_all_public_write_routes (tours.tests.TourTests.test_csrf_on_all_public_write_routes) ... ok
+test_database_prevents_conflicting_purchase (tours.tests.TourTests.test_database_prevents_conflicting_purchase) ... ok
+test_delete_get_rejected (tours.tests.TourTests.test_delete_get_rejected) ... ok
+test_delete_protected_tour (tours.tests.TourTests.test_delete_protected_tour) ... ok
+test_delete_regular_user_denied (tours.tests.TourTests.test_delete_regular_user_denied) ... ok
+test_delete_staff (tours.tests.TourTests.test_delete_staff) ... ok
+test_departure_time_change_with_bookings_rejected (tours.tests.TourTests.test_departure_time_change_with_bookings_rejected) ... ok
+test_departures_one_to_many (tours.tests.TourTests.test_departures_one_to_many) ... ok
+test_detail_content_categories (tours.tests.TourTests.test_detail_content_categories) ... ok
+test_detail_missing (tours.tests.TourTests.test_detail_missing) ... ok
+test_different_day_allowed (tours.tests.TourTests.test_different_day_allowed) ... ok
+test_different_time_allowed (tours.tests.TourTests.test_different_time_allowed) ... ok
+test_different_tour_same_time_rejected (tours.tests.TourTests.test_different_tour_same_time_rejected) ... ok
+test_different_users_same_time_allowed (tours.tests.TourTests.test_different_users_same_time_allowed) ... ok
+test_duplicate_purchase_rejected (tours.tests.TourTests.test_duplicate_purchase_rejected) ... ok
+test_empty_catalog (tours.tests.TourTests.test_empty_catalog) ... ok
+test_list_content_and_links (tours.tests.TourTests.test_list_content_and_links) ... ok
+test_login_valid_and_invalid (tours.tests.TourTests.test_login_valid_and_invalid) ... ok
+test_logout_post (tours.tests.TourTests.test_logout_post) ... ok
+test_model_comment_validation (tours.tests.TourTests.test_model_comment_validation) ... ok
+test_multiple_comments_after_visit (tours.tests.TourTests.test_multiple_comments_after_visit) ... ok
+test_my_bookings_private (tours.tests.TourTests.test_my_bookings_private) ... ok
+test_profile_create_and_update (tours.tests.TourTests.test_profile_create_and_update) ... ok
+test_profile_empty_rejected (tours.tests.TourTests.test_profile_empty_rejected) ... ok
+test_profile_one_to_one_db (tours.tests.TourTests.test_profile_one_to_one_db) ... ok
+test_profile_too_long (tours.tests.TourTests.test_profile_too_long) ... ok
+test_purchase_get_has_no_effect (tours.tests.TourTests.test_purchase_get_has_no_effect) ... ok
+test_purchase_missing_departure (tours.tests.TourTests.test_purchase_missing_departure) ... ok
+test_purchase_past_rejected (tours.tests.TourTests.test_purchase_past_rejected) ... ok
+test_purchase_requires_login (tours.tests.TourTests.test_purchase_requires_login) ... ok
+test_purchase_success (tours.tests.TourTests.test_purchase_success) ... ok
+test_purchase_user_spoof_ignored (tours.tests.TourTests.test_purchase_user_spoof_ignored) ... ok
+test_regular_user_cannot_confirm_attendance (tours.tests.TourTests.test_regular_user_cannot_confirm_attendance) ... ok
+test_update_invalid_no_changes (tours.tests.TourTests.test_update_invalid_no_changes) ... ok
+test_update_missing (tours.tests.TourTests.test_update_missing) ... ok
+test_update_regular_user_denied (tours.tests.TourTests.test_update_regular_user_denied) ... ok
+test_update_tour_and_categories (tours.tests.TourTests.test_update_tour_and_categories) ... ok
+
+----------------------------------------------------------------------
+Ran 87 tests in 1.056s
+
+OK
+Destroying test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+ OK
+System check identified no issues (0 silenced).

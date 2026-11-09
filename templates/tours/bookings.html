@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<h1>Мои туры</h1>{% for b in bookings %}<article>{{b.departure}}<p>Посещение: {{b.attended|yesno:'подтверждено,не подтверждено'}}</p><a href="{% url 'comment' b.pk %}">Оставить комментарий</a></article>{% empty %}<p>Покупок пока нет.</p>{% endfor %}{% endblock %}
